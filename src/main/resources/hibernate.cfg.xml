@@ -5,10 +5,12 @@
 
 <hibernate-configuration>
     <session-factory>
+
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:54321/app</property>
         <property name="hibernate.connection.username">td</property>
         <property name="hibernate.connection.password">123</property>
+
         <property name="hibernate.connection.pool_size">1</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>

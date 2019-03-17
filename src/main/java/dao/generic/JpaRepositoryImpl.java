@@ -34,6 +34,4 @@ public class JpaRepositoryImpl<T, PK extends Serializable>
     public Boolean contains(PK id) {
         return HibernateUtil.getSessionFactory().openSession().get(entityClass, id) != null;
     }
-
-
 }

@@ -1,4 +1,4 @@
-package parser.command.generic;
+package commandExec.command.generic;
 
 import services.PriceListService;
 import services.ProductService;

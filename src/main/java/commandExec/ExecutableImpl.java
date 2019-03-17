@@ -1,21 +1,20 @@
-package parser;
+package commandExec;
 
-import parser.command.DemandExecutor;
-import parser.command.NewProductExecutor;
-import parser.command.PurchaseExecutor;
-import parser.command.SalesReportExecutor;
-import parser.command.generic.Command;
-import parser.command.generic.Executable;
-import parser.command.generic.Executor;
+import commandExec.command.DemandExecutor;
+import commandExec.command.NewProductExecutor;
+import commandExec.command.PurchaseExecutor;
+import commandExec.command.SalesReportExecutor;
+import commandExec.command.generic.Executable;
+import commandExec.command.generic.Executor;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Contractor implements Executable {
+public class ExecutableImpl implements Executable {
 
     private Map<Command, Executor> executors = new HashMap<>();
 
-    public Contractor() {
+    public ExecutableImpl() {
         init();
     }
 

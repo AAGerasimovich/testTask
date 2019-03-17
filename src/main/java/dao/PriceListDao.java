@@ -18,7 +18,8 @@ public class PriceListDao extends JpaRepositoryImpl<PriceList, Integer> {
         if (localDate == null) {
             date = "( select max(date) from PriceList )";
         }
-        Query query = session.createQuery(" select sum(PL.count) from PriceList as PL " +
+        Query query = session.createQuery(
+                " select sum(PL.count) from PriceList as PL " +
                 "where state = :stateParam " +
                 "and date <= " + date +
                 "and product = :productParam")
@@ -29,8 +30,6 @@ public class PriceListDao extends JpaRepositoryImpl<PriceList, Integer> {
         }
         List<Long> count = query.list();
         session.close();
-
-
         return count.get(0);
     }
 
@@ -45,6 +44,5 @@ public class PriceListDao extends JpaRepositoryImpl<PriceList, Integer> {
         session.close();
         return list;
     }
-
 }
 

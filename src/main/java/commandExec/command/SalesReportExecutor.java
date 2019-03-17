@@ -1,9 +1,9 @@
-package parser.command;
+package commandExec.command;
 
 import model.PriceList;
 import model.PriceList.State;
 import model.Product;
-import parser.command.generic.Executor;
+import commandExec.command.generic.Executor;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -25,7 +25,6 @@ public class SalesReportExecutor extends Executor {
         }
 
         List<PriceList> list = priceListService.getListByDateAndProduct(date, product);
-
         Long shipmentCount = priceListService.getParamCount(date, State.SHIPMENT, product);
         shipmentCount = shipmentCount == null ? 0 : shipmentCount;
 

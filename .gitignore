@@ -1,0 +1,9 @@
+tmp
+.gradle
+.idea
+gradle
+/gradle
+out
+/out
+build
+/build

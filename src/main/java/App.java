@@ -1,5 +1,5 @@
-import parser.Contractor;
-import parser.command.generic.Command;
+import commandExec.ExecutableImpl;
+import commandExec.Command;
 
 import java.util.Scanner;
 
@@ -8,15 +8,16 @@ public class App {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Contractor contractor = new Contractor();
+        ExecutableImpl executableImpl = new ExecutableImpl();
         while (!sc.hasNext("EXIT")) {
             String s = sc.nextLine();
             if (s.equals("")) {
                 continue;
             }
-            Command command = Command.getCommand(s.split("\\s+"));
+            String[] arg = s.split("\\s+");
+            Command command = Command.getCommand(arg);
             if (command != null) {
-                contractor.exec(command, s.split("\\s+"));
+                executableImpl.exec(command, arg);
             } else {
                 System.out.println("ERROR");
             }

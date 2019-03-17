@@ -1,8 +1,8 @@
-package parser.command;
+package commandExec.command;
 
 
 import model.Product;
-import parser.command.generic.Executor;
+import commandExec.command.generic.Executor;
 
 
 public class NewProductExecutor extends Executor {
