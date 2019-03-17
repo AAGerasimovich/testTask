@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'ConsoleApp'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.postgresql:postgresql:42.2.5'
+    compile 'org.hibernate:hibernate-core:5.4.1.Final'
+    compileOnly 'org.projectlombok:lombok:1.18.6'
+    annotationProcessor 'org.projectlombok:lombok:1.18.6'
+}

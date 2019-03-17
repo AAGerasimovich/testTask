@@ -1,0 +1,11 @@
+app:
+  container_name: app
+  image: sameersbn/postgresql:10
+  ports:
+    - "54321:5432"
+  environment:
+    - DB_USER=td
+    - DB_PASS=123
+    - DB_NAME=app
+  volumes:
+    - ./tmp/docker/app-db:/var/lib/app-db
